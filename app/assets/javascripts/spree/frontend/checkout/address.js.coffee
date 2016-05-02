@@ -1,9 +1,20 @@
 $ ->
   if $('#checkout_form_address').is('*')
+    window.currentAddress = null
     # Hidden by default to support browsers with javascript disabled
     $('.js-address-fields').show()
 
     $('#checkout_form_address').validate()
+
+    pca.on 'load', (type, id, control) ->
+      control.listen 'populate', (address) ->
+        window.currentAddress = address
+        if this.fields[0].element.match(/bill/)
+          form_type = 'b'
+        else
+          form_type = 's'
+
+        updateState form_type
 
     getCountryId = (region) ->
       $('#' + region + 'country select').val()
@@ -21,6 +32,9 @@ $ ->
             fillStates(region)
         else
           fillStates(region)
+
+    fillPcaProvince = (element) ->
+      pca.setValue(element, window.currentAddress.ProvinceName)
 
     fillStates = (region) ->
       countryId = getCountryId(region)
@@ -68,6 +82,8 @@ $ ->
         stateInput.prop('disabled', !statesRequired)
         stateInput.removeClass('hidden')
         stateSelect.removeClass('required')
+      unless window.currentAddress == null
+        fillPcaProvince stateSelect.attr 'id'
 
     $('#bcountry select').change ->
       updateState 'b'
