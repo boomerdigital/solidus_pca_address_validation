@@ -3,3 +3,6 @@
 
 en:
   hello: "Hello world"
+  spree:
+    country_names:
+      US: United States
