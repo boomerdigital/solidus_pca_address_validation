@@ -1,6 +1,6 @@
 Deface::Override.new(
-  virtual_path: 'spree/layouts/spree_application',
+  virtual_path: 'spree/checkout/_address',
   name:         'Add pca js script in head',
-  insert_bottom:   "[data-hook='inside_head']",
+  insert_bottom:   "[data-hook='billing_fieldset_wrapper']",
   partial:  'spree/shared/pca_js_tag'
 )
