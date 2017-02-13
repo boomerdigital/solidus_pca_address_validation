@@ -1,7 +1,7 @@
 SolidusPcaAddressValidation
 ===========================
 
-Introduction goes here.
+This branch is specifically for Addressy integration of address validation.
 
 Installation
 ------------
@@ -9,7 +9,7 @@ Installation
 Add solidus_pca_address_validation to your Gemfile:
 
 ```ruby
-gem 'solidus_pca_address_validation'
+gem 'solidus_pca_address_validation', github: 'boomerdigital/solidus_pca_address_validation', branch: 'addressy'
 ```
 
 Bundle your dependencies and run the installation generator:
