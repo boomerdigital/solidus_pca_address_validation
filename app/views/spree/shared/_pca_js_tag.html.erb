@@ -1,5 +1,5 @@
 <% content_for :head do %>
   <script>
-    (function (a, c, b, e) {a[b] = a[b] || {}; a[b].initial = { accountCode: "<%= ENV['PCA_ACCOUNT_CODE'] %>", host: "<%= ENV['PCA_ACCOUNT_CODE'] %>.pcapredict.com" }; a[b].on = a[b].on || function () { (a[b].onq = a[b].onq || []).push(arguments) }; var d = c.createElement("script"); d.async = !0; d.src = e; c = c.getElementsByTagName("script")[0]; c.parentNode.insertBefore(d, c)})(window, document, "pca", "//<%= ENV['PCA_ACCOUNT_CODE'] %>.pcapredict.com/js/sensor.js");
+    (function(n, t, i, r) {var u,f;n[i]=n[i]||{},n[i].initial={ accountCode:"<%= ENV['PCA_ACCOUNT_CODE'] %>",host: "<%= ENV['PCA_ACCOUNT_CODE'] %>.addressy.com" },n[i].on=n[i].on||function(){(n[i].onq=n[i].onq||[]).push(arguments)},u=t.createElement("script"),u.async=!0,u.src=r,f=t.getElementsByTagName("script")[0],f.parentNode.insertBefore(u,f)})(window, document, "pca", "//<%= ENV['PCA_ACCOUNT_CODE'] %>.addressy.com/js/sensor.js");
   </script>
 <% end %>
