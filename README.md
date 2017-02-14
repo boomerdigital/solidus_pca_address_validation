@@ -1,7 +1,7 @@
 SolidusPcaAddressValidation
 ===========================
 
-Introduction goes here.
+The master branch is for PCA Address validation. If your business is based out of North America, you may want to refer to our other branch, addressy.
 
 Installation
 ------------
